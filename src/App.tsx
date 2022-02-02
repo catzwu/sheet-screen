@@ -133,8 +133,6 @@ function App() {
       //   setLoaded(true);
       // });
 
-
-
     }
   }
 
@@ -175,7 +173,7 @@ export function Base() {
   const { spreadsheet } = useContext(SpreadsheetContext);
 
   useEffect(() => {
-    if (spreadsheet && Object.keys(spreadsheet).length != 0) {
+    if (spreadsheet && Object.keys(spreadsheet).length !== 0) {
       setSpreadsheetLoaded(true);
       setSheets(listSheets(spreadsheet));
       setHeadings([]);
@@ -211,8 +209,8 @@ export function Base() {
     for (var i = 0; i < newHeadings.length; i++) {
       checkedState = checkedState && newHeadings[i].checked;
     }
-    for (var i = 0; i < newHeadings.length; i++) {
-      newHeadings[i].checked = !checkedState;
+    for (var j = 0; j < newHeadings.length; j++) {
+      newHeadings[j].checked = !checkedState;
     }
     setHeadings(newHeadings);
   }
